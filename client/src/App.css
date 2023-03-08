@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 3em auto;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    transition: .25s;
+    max-width: 747px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="text"],
+textarea {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button[type="submit"] {
+    background-color: #007aff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0055ff;
+}
+
+.blogposts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.blogPostContainer {
+    width: 45%;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #333;
+}
+
+.blogPostContainer .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.blogPostContainer .content {
+    margin-bottom: 10px;
+}
+
+.blogPostContainer .button-div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.delete-button,
+.edit-button,
+.update-button {
+    background-color: #007aff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.blogPostContainer .delete-button:hover,
+.blogPostContainer .edit-button:hover {
+    background-color: #0055ff;
+}
+
+.blogPostContainer .edit-input {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    width: 95%;
 }
