@@ -1,18 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const useFetchDatabase = url => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+function useFetch(url) {
+  const [blogPosts, setBlogPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
         const response = await axios.get(url);
-        setData(response.data);
-      } catch (error) {
-        setError(error);
+        setBlogPosts(response.data);
+      } catch (err) {
+        setError(err);
       } finally {
         setLoading(false);
       }
@@ -20,7 +21,7 @@ const useFetchDatabase = url => {
     fetchData();
   }, [url]);
 
-  return { data, loading, error };
-};
+  return { blogPosts, loading, error, setBlogPosts };
+}
 
-export { useFetchDatabase };
+export { useFetch };

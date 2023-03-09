@@ -1,27 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import axios from 'axios';
 import BlogPost from './BlogPost';
-import { useFetchDatabase } from './helper';
+import { useFetch } from './helper';
 
 function BlogForm() {
   const [title, setTitle] = useState('');
   const [newTitle, setNewTitle] = useState('');
   const [content, setContent] = useState('');
   const [newContent, setNewContent] = useState('');
-  const [blogPosts, setBlogPosts] = useState([]);
-  const [isEditing, setIsEditing] = useState(blogPosts.map(() => false));
 
-  useEffect(() => {
-    axios
-      .get('http://localhost:3001/api/posts')
-      .then(response => {
-        setBlogPosts(response.data);
-      })
-      .catch(error => {
-        console.log('Error fetching and parsing data', error);
-      });
-  }, [blogPosts]);
+  const { blogPosts, setBlogPosts, loading, error } = useFetch(
+    'http://localhost:3001/api/posts',
+  );
+
+  const [isEditing, setIsEditing] = useState(blogPosts.map(() => false));
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -104,6 +97,8 @@ function BlogForm() {
   return (
     <div>
       <form className='container'>
+        {error && console.log('error...')}
+        {loading && console.log('loading...')}
         <h1 style={{ textAlign: 'center' }}>Coding Blog</h1>
         <div>
           <label htmlFor='title'>Title:</label>
