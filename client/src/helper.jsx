@@ -22,6 +22,6 @@ const useFetchDatabase = url => {
   }, [url]);
 
   return { blogPosts, loading, error, setBlogPosts };
-}
+};
 
-export { useFetch };
+export { useFetchDatabase };

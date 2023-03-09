@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import axios from 'axios';
 import BlogPost from './BlogPost';
-import { useFetch } from './helper';
+import { useFetchDatabase } from './helper';
 
 function BlogForm() {
   const [title, setTitle] = useState('');
@@ -10,7 +10,7 @@ function BlogForm() {
   const [content, setContent] = useState('');
   const [newContent, setNewContent] = useState('');
 
-  const { blogPosts, setBlogPosts, loading, error } = useFetch(
+  const { blogPosts, setBlogPosts, loading, error } = useFetchDatabase(
     'http://localhost:3001/api/posts',
   );
 
