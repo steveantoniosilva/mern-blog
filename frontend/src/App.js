@@ -26,10 +26,10 @@ function BlogForm() {
       content,
     };
 
-    setBlogPosts(prevPosts => [blogPost, ...prevPosts]);
     axios
       .post('http://localhost:3001/api/posts', blogPost)
       .then(response => {
+        setBlogPosts(prevPosts => [blogPost, ...prevPosts]);
         console.log('blogPost submitted to database');
       })
       .catch(error => {
