@@ -1,19 +1,23 @@
-body {
-    background-color: #222;
-    color: #fff;
-    font-family: sans-serif;
+.blog-form-main-div {
+    background-color: #555;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 85vw;
     margin: 3em auto;
     padding: 20px;
     border: 1px solid #555;
     border-radius: 5px;
     background-color: #333;
-    transition: .25s;
     max-width: 747px;
 }
 

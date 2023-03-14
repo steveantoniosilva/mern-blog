@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './App.css';
+import '../css-components/BlogForm.css';
 import axios from 'axios';
 import BlogPost from './BlogPost';
-import { useFetchDatabase } from './helper';
+import { useFetchDatabase } from '../helper';
 
 function BlogForm() {
   const [title, setTitle] = useState('');
@@ -95,11 +95,11 @@ function BlogForm() {
   ));
 
   return (
-    <div>
+    <div className='blog-form-main-div'>
       <form className='container'>
         {error && console.log('error...')}
         {loading && console.log('loading...')}
-        <h1 style={{ textAlign: 'center' }}>Coding Blog</h1>
+        <h1 className='blog-form-title'>Coding Blog</h1>
         <div>
           <label htmlFor='title'>Title:</label>
           <input

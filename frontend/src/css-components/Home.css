@@ -1,0 +1,134 @@
+.home-main-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(5, 5, 5, .8);
+}
+
+.google-name {
+    text-align: center;
+    letter-spacing: 3px;
+    font-style: italic;
+    color: #555;
+    background-color: white;
+    text-transform: uppercase;
+}
+
+.sign-out-btn {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    font-size: .75rem;
+    border-radius: 11px;
+    border: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #665;
+    background-color: whitesmoke;
+    border: 1px solid transparent;
+    width: 222px;
+}
+
+.sign-out-btn:hover {
+    cursor: pointer;
+    border: 1px solid #999;
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 1em;
+}
+
+.sound-icon {
+    position: absolute;
+    z-index: -1;
+}
+
+.sound-wave {
+    width: auto;
+    height: 23px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bar {
+    display: block;
+    width: 4px;
+    margin-right: 4px;
+    height: 23px;
+    border-radius: 20px;
+    background: tomato;
+    animation: sound 0ms -800ms linear infinite alternate;
+    transition: height 0.8s;
+}
+
+@keyframes sound {
+    0% {
+        opacity: .1;
+        height: 3px;
+    }
+
+    100% {
+        opacity: 1;
+        height: 111px;
+    }
+}
+
+.bar:nth-child(1) {
+    height: 1px;
+    animation-duration: 474ms;
+}
+
+.bar:nth-child(2) {
+    height: 5px;
+    animation-duration: 433ms;
+}
+
+.bar:nth-child(3) {
+    height: 9px;
+    animation-duration: 407ms;
+}
+
+.bar:nth-child(4) {
+    height: 13px;
+    animation-duration: 458ms;
+}
+
+.bar:nth-child(5) {
+    height: 15px;
+    animation-duration: 400ms;
+}
+
+.bar:nth-child(6) {
+    height: 16px;
+    animation-duration: 427ms;
+}
+
+.bar:nth-child(7) {
+    height: 17px;
+    animation-duration: 441ms;
+}
+
+.bar:nth-child(8) {
+    height: 18px;
+    animation-duration: 419ms;
+}
+
+.bar:nth-child(9) {
+    height: 20px;
+    animation-duration: 487ms;
+}
+
+.bar:nth-child(10) {
+    height: 23px;
+    animation-duration: 442ms;
+}

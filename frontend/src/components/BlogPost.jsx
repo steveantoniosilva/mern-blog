@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './BlogPost.css';
+import '../css-components/BlogPost.css';
 
 export default function BlogPost({
   id,

@@ -1,0 +1,50 @@
+.hamburger {
+    position: fixed;
+    top: 11px;
+    left: 11px;
+    z-index: 111111;
+}
+
+.nav-open {
+    height: 100vh;
+    width: 333px;
+    background-color: royalblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding-top: 5em;
+    transition: .25s;
+}
+
+.nav-closed {
+    height: 100vh;
+    width: 333px;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding-top: 5em;
+    transform: translateX(-333px);
+}
+
+nav {
+    margin-left: 1.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 1em;
+    letter-spacing: 3px;
+}
+
+nav ul li a {
+    color: tan;
+    text-decoration: none;
+    font-size: 1.5em;
+}
